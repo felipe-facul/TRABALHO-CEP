@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de CEP - BrasilAPI</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container card shadow-lg p-4">
+        <h1 class="text-center mb-4">Consulta de CEP</h1>
+        <p class="lead text-center">Digite o CEP abaixo e veja o endereço correspondente.</p>
+
+        <div class="input-group mb-3">
+            <input type="text" id="cep-input" class="form-control" placeholder="Ex: 01001000" maxlength="8">
+            <button class="btn btn-primary" id="search-btn">Buscar</button>
+        </div>
+
+        <div id="result" class="alert alert-info d-none" role="alert">
+            <h4 class="alert-heading">Endereço Encontrado</h4>
+            <table class="table table-striped mt-3">
+                <tbody id="result-table"></tbody>
+            </table>
+        </div>
+
+        <div id="error-message" class="alert alert-danger d-none" role="alert">
+            <strong>Erro:</strong> CEP não encontrado. Verifique e tente novamente.
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript Personalizado -->
+    <script src="script.js"></script>
+</body>
+
+</html>
